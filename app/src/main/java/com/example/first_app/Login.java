@@ -24,6 +24,7 @@ public class Login extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
 
+        singup_btn = findViewById(R.id.singup_btn);
 
         singup_btn.setOnClickListener(new View.OnClickListener() {
             @Override
