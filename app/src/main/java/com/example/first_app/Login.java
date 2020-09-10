@@ -13,7 +13,7 @@ import android.widget.Button;
 
 
 public class Login extends AppCompatActivity {
-    Button callSignUp;
+    Button singup_btn;
 
 
     @Override
@@ -25,7 +25,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
-        callSignUp.setOnClickListener(new View.OnClickListener() {
+        singup_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Login.this,SingUp.class);
