@@ -65,7 +65,7 @@ public class SingUp extends AppCompatActivity {
 
                 UserHelper userHelper = new UserHelper(name,username,email,phoneNo,password);
 
-                reference.setValue(userHelper);
+                reference.child(phoneNo).setValue(userHelper);
 
             }
         });
