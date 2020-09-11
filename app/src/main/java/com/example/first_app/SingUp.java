@@ -46,6 +46,10 @@ public class SingUp extends AppCompatActivity {
             }
         });
 
+        //validate forms
+
+
+
 
         //Save data in firebase on button click
         regButton.setOnClickListener(new View.OnClickListener() {
