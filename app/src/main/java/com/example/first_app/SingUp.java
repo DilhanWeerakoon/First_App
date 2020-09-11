@@ -8,8 +8,16 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class SingUp extends AppCompatActivity {
-    Button callLoginIn;
+    Button callLoginIn, regButton;
+
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +34,21 @@ public class SingUp extends AppCompatActivity {
                 Intent intent = new Intent(SingUp.this,Login.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+        //Define the button
+        regButton = findViewById(R.id.reg_btn);
+
+        //Save data in firebase on button click
+        regButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                rootNode = FirebaseDatabase.getInstance();
+                reference = rootNode.getReference("users");
+
+                reference.setValue("First data stored");
+
             }
         });
     }
