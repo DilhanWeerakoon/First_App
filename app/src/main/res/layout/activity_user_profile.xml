@@ -25,7 +25,7 @@
             android:text="Dilhan Weerakoon"
             android:textSize="20sp"
             android:fontFamily="@font/bungee"
-            to android:layout_toRightOf="@+id/profile_image"
+            android:layout_toRightOf="@+id/profile_image"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"/>
 
